@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi vecino Totoro</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+
+      :root {
+        /* primary */
+        --primary-base: 88 36%;
+        --primary: var(--primary-base) 65%;
+        --primary-dark: var(--primary-base) 45%;
+        --primary-light: var(--primary-base) 95%;
+
+        /* secondary */
+        --secondary-base: 44 37%;
+        --secondary: var(--secondary-base) 90%;
+        --secondary-dark: var(--secondary-base) 60%;
+        --secondary-light: var(--secondary-base) 100%;
+
+        /* accent */
+        --accent-base: 248 8%;
+        --accent: var(--accent-base) 40%;
+        --accent-dark: var(--accent-base) 25%;
+        --accent-light: var(--acent-base) 60%;
+
+        /* text */
+        --text-base: 0 0%;
+        --text: var(--text-base) 90%;
+        --text-light: var(--text-base) 100%;
+        --text-dark: var(--text-base) 70%;
+
+        /* background */
+        --background: 10 10% 3%;
+      }
+
+      body {
+        background-color: hsl(var(--background));
+      }
+
+      * {
+        font-family: "Geist", sans-serif;
+      }
+
+      .base-color {
+        color: hsl(var(--text));
+      }
+    </style>
+  </head>
+  <body class="flex flex-col gap-16">
+    <header
+      class="flex flex-col gap-6 md:flex-row justify-between items-center text-[hsl(var(--text))] bg-[hsla(var(--background)/0.50)] backdrop-blur-sm fixed w-full px-10 py-6 md:px-64 border-b-1 border-[hsla(var(--primary-light)/0.10)] z-10"
+    >
+      <div class="flex items-end gap-2">
+        <span class="text-base">Mi vecino Totoro</span>
+      </div>
+
+      <nav class="text-sm">
+        <ul class="flex gap-4 items-center">
+          <li>
+            <a
+              href="#reviews"
+              class="flex gap-1 items-center hover:text-[hsl(var(--primary-dark))]"
+            >
+              <div class="h-5 w-5">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z"
+                      fill="currentColor"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+
+              Reseñas</a
+            >
+          </li>
+
+          <li>
+            <button
+              class="flex gap-2 bg-[hsl(var(--primary-dark))] text-[hsl(var(--text))] py-2 px-6 rounded text-sm w-full font-medium hover:bg-[hsla(var(--primary-dark)/0.85)] hover:cursor-pointer"
+            >
+              <div class="h-5 w-5">
+                <svg
+                  version="1.1"
+                  id="_x32_"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 512 512"
+                  xml:space="preserve"
+                  fill="currentColor"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <style type="text/css">
+                      .st0 {
+                        fill: currentColor;
+                      }
+                    </style>
+                    <g>
+                      <path
+                        class="st0"
+                        d="M343.656,451.109C410,411.438,454.422,338.906,454.422,256c0-125.484-101.719-227.219-227.203-227.219 C101.719,28.781,0,130.516,0,256s101.719,227.219,227.219,227.219H512v-32.109H343.656z M318.484,145.875 c23.547-13.594,53.641-5.531,67.234,18.016s5.531,53.656-18.016,67.25c-23.547,13.578-53.641,5.516-67.234-18.016 C286.859,189.563,294.938,159.469,318.484,145.875z M300.453,297.688c13.609-23.547,43.703-31.609,67.25-18.016 c23.547,13.609,31.609,43.703,18.016,67.25s-43.688,31.609-67.25,18.016C294.938,351.344,286.859,321.234,300.453,297.688z M227.219,72.375c27.188,0,49.219,22.031,49.219,49.219s-22.031,49.25-49.219,49.25s-49.25-22.063-49.25-49.25 S200.031,72.375,227.219,72.375z M249.938,256c0,12.563-10.172,22.719-22.719,22.719c-12.563,0-22.719-10.156-22.719-22.719 s10.156-22.719,22.719-22.719C239.766,233.281,249.938,243.438,249.938,256z M68.703,163.891 c13.594-23.547,43.703-31.609,67.25-18.016s31.609,43.688,18.016,67.25c-13.594,23.531-43.703,31.609-67.25,18.016 C63.188,217.547,55.109,187.438,68.703,163.891z M135.969,364.938c-23.563,13.594-53.656,5.531-67.266-18.016 c-13.578-23.547-5.516-53.656,18.016-67.266c23.547-13.594,53.656-5.516,67.25,18.031S159.5,351.344,135.969,364.938z M177.969,389.203c0-27.188,22.063-49.234,49.25-49.234s49.219,22.047,49.219,49.234s-22.031,49.234-49.219,49.234 S177.969,416.391,177.969,389.203z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              Ver trailer
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- hero -->
+    <section class="mx-8 md:mx-16 mt-[64px]">
+      <!-- hero content -->
+      <div
+        class="flex flex-col-reverse md:flex-row justify-between gap-2 w-full pt-16"
+      >
+        <div class="flex flex-col gap-2 w-full md:w-1/2 justify-center">
+          <h1 class="base-color flex flex-col text-5xl md:text-7xl font-bold">
+            Mi vecino <span class="text-[hsl(var(--primary))]">Totoro</span>
+          </h1>
+          <p class="text-sm md:text-base text-[hsl(var(--text-dark))]">
+            Esta historia animada del director Hayao Miyazaki sigue a las
+            estudiantes y hermanas Satsuke y Mei mientras se establecen en su
+            casa de campo con su padre y esperan a que su madre se recupere de
+            una enfermedad en un hospital del área. Cuando las hermanas exploran
+            su nueva casa, descubren y hacen amistad con unos duendes
+            juguetones, y en el bosque cercano encuentran a una enorme criatura
+            conocida como Totoro.
+          </p>
+        </div>
+
+        <div class="flex w-full md:w-1/2 md:justify-end">
+          <img
+            src="https://mystickermania.com/cdn/stickers/anime/totoro-and-mei-kusakabe-512x512.png"
+            alt="totoro and a girl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="reviews"
+      class="mx-8 md:mx-16 bg-[hsl(var(--primary-dark))] p-10 text-[hsl(var(--primary-light))] rounded-xl flex flex-col gap-3"
+    >
+      <header class="flex gap-2 items-center">
+        <div class="h-10 w-10">
+          <svg
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z"
+                fill="currentColor"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <h2 class="text-3xl font-bold">Reseñas</h2>
+      </header>
+
+      <!-- reviews -->
+      <div class="flex flex-col md:grid md:grid-cols-3 gap-8 py-3">
+        <!-- first review -->
+        <article
+          class="bg-[hsl(var(--primary-a))] rounded-xl text-[rgb(var(--base-color))] relative"
+        >
+          <header class="flex flex-col gap-2">
+            <span class="font-bold text-base">Carlos T.</span>
+          </header>
+
+          <div>
+            <p class="text-sm line-clamp-6">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. A
+              tempora accusamus consequatur placeat ab eum neque doloremque, qui
+              recusandae ullam harum dolore fuga rerum blanditiis rem voluptatum
+              quia inventore? Cupiditate? Amet, blanditiis soluta illum delectus
+              quibusdam reprehenderit harum sapiente et? Consectetur asperiores,
+              nemo tempora, nisi error vero optio facilis reprehenderit, libero
+              quam illo quaerat itaque accusantium obcaecati alias. Quia, a!
+            </p>
+          </div>
+
+          <footer class="mt-4 border-t-1 border-[hsl(var(--primary-light))]">
+            <span class="text-xs font-light"
+              >Esta opinión le resultó útil a
+              <b class="font-bold">11</b> personas</span
+            >
+          </footer>
+        </article>
+
+        <!-- second review -->
+        <article
+          class="bg-[hsl(var(--primary-a))] rounded-xl text-[rgb(var(--base-color))] relative"
+        >
+          <header>
+            <span class="font-bold text-base">Lucia A.</span>
+          </header>
+
+          <div>
+            <p class="text-sm line-clamp-6">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+              accusamus impedit illo praesentium vel excepturi molestias eveniet
+              dolorum? Facilis iure numquam atque dolore voluptates, non quo
+              odio. Dolor, laudantium ullam! Iusto ut totam quasi, ex est beatae
+              veniam. Error expedita explicabo quo suscipit, corporis similique
+              perspiciatis tenetur aliquam minima eaque, culpa vel ratione
+              obcaecati facere earum porro! Doloribus, totam repellat.
+            </p>
+          </div>
+
+          <footer class="mt-4 border-t-1 border-[hsl(var(--primary-light))]">
+            <span class="text-xs font-light"
+              >Esta opinión le resultó útil a
+              <b class="font-bold">38</b> personas</span
+            >
+          </footer>
+        </article>
+
+        <!-- third review -->
+        <article
+          class="bg-[hsl(var(--primary-a))] rounded-xl text-[rgb(var(--base-color))] relative"
+        >
+          <header>
+            <span class="font-bold text-base">Camila U.</span>
+          </header>
+
+          <div>
+            <p class="text-sm line-clamp-6">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+              illum repellendus assumenda at neque porro possimus corrupti
+              reprehenderit aspernatur, quo voluptatem iste dignissimos? Maxime,
+              architecto? Dolorum, error laboriosam? Eum, cupiditate!
+              Dignissimos quia provident nam saepe repellendus, esse officiis
+              assumenda tempore in laborum asperiores est aliquam accusantium
+              consequatur explicabo sint inventore quas ea eum libero
+              recusandae, quibusdam rerum magnam! Labore, vero.
+            </p>
+          </div>
+
+          <footer class="mt-4 border-t-1 border-[hsl(var(--primary-light))]">
+            <span class="text-xs font-light"
+              >Esta opinión le resultó útil a
+              <b class="font-bold">5</b> personas</span
+            >
+          </footer>
+        </article>
+
+        <!-- four review -->
+        <article
+          class="bg-[hsl(var(--primary-a))] rounded-xl text-[rgb(var(--base-color))] relative"
+        >
+          <header>
+            <span class="font-bold text-base">Angel P.</span>
+          </header>
+
+          <div>
+            <p class="text-sm line-clamp-6">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Corporis, eaque qui modi ex molestiae, dolorum libero incidunt
+              provident rem illo iste aut in culpa quod minus cupiditate non
+              similique esse? Fuga doloremque tempore accusantium eaque velit
+              saepe laudantium aut officia explicabo minus ipsum et ducimus illo
+              necessitatibus culpa rem temporibus mollitia cupiditate, eveniet
+              aliquam ab, delectus perferendis. Dolores, minus impedit.
+            </p>
+          </div>
+
+          <footer class="mt-4 border-t-1 border-[hsl(var(--primary-light))]">
+            <span class="text-xs font-light"
+              >Esta opinión le resultó útil a
+              <b class="font-bold">20</b> personas</span
+            >
+          </footer>
+        </article>
+      </div>
+
+      <footer class="md:self-end">
+        <button
+          class="bg-[hsl(var(--primary-light))] text-[hsl(var(--primary-dark))] py-2 px-6 rounded text-sm w-full font-medium hover:bg-[hsla(var(--primary-light)/0.85)] hover:cursor-pointer"
+        >
+          Leer más <span class="ml-2">→</span>
+        </button>
+      </footer>
+    </section>
+
+    <section
+      id="trailer"
+      class="mx-8 md:mx-16 text-[hsl(var(--primary-light))] rounded-xl flexflex-col gap-3"
+    >
+      <header class="flex justify-center gap-2 flex-col items-center mb-8">
+        <div class="h-10 w-10">
+          <svg
+            version="1.1"
+            id="_x32_"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 512 512"
+            xml:space="preserve"
+            fill="currentColor"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <style type="text/css">
+                .st0 {
+                  fill: currentColor;
+                }
+              </style>
+              <g>
+                <path
+                  class="st0"
+                  d="M343.656,451.109C410,411.438,454.422,338.906,454.422,256c0-125.484-101.719-227.219-227.203-227.219 C101.719,28.781,0,130.516,0,256s101.719,227.219,227.219,227.219H512v-32.109H343.656z M318.484,145.875 c23.547-13.594,53.641-5.531,67.234,18.016s5.531,53.656-18.016,67.25c-23.547,13.578-53.641,5.516-67.234-18.016 C286.859,189.563,294.938,159.469,318.484,145.875z M300.453,297.688c13.609-23.547,43.703-31.609,67.25-18.016 c23.547,13.609,31.609,43.703,18.016,67.25s-43.688,31.609-67.25,18.016C294.938,351.344,286.859,321.234,300.453,297.688z M227.219,72.375c27.188,0,49.219,22.031,49.219,49.219s-22.031,49.25-49.219,49.25s-49.25-22.063-49.25-49.25 S200.031,72.375,227.219,72.375z M249.938,256c0,12.563-10.172,22.719-22.719,22.719c-12.563,0-22.719-10.156-22.719-22.719 s10.156-22.719,22.719-22.719C239.766,233.281,249.938,243.438,249.938,256z M68.703,163.891 c13.594-23.547,43.703-31.609,67.25-18.016s31.609,43.688,18.016,67.25c-13.594,23.531-43.703,31.609-67.25,18.016 C63.188,217.547,55.109,187.438,68.703,163.891z M135.969,364.938c-23.563,13.594-53.656,5.531-67.266-18.016 c-13.578-23.547-5.516-53.656,18.016-67.266c23.547-13.594,53.656-5.516,67.25,18.031S159.5,351.344,135.969,364.938z M177.969,389.203c0-27.188,22.063-49.234,49.25-49.234s49.219,22.047,49.219,49.234s-22.031,49.234-49.219,49.234 S177.969,416.391,177.969,389.203z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <h2 class="text-3xl font-bold">Trailer</h2>
+      </header>
+
+      <div
+        style="
+          position: relative;
+          padding-bottom: 56.25%;
+          height: 0;
+          overflow: hidden;
+        "
+      >
+        <iframe
+          src="https://geo.dailymotion.com/player.html?video=x9csuhi"
+          style="
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            overflow: hidden;
+            border: none;
+          "
+          allowfullscreen
+          title="Dailymotion Video Player"
+          allow="web-share"
+        >
+        </iframe>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div
+        class="mx-8 md:mx-16 flex flex-col gap-4 items-center pb-16 text-[hsl(var(--primary))]"
+      >
+        <img
+          class="h-24"
+          src="https://mystickermania.com/cdn/stickers/anime/totoro-and-mei-kusakabe-512x512.png"
+          alt="totoro and a girl"
+        />
+
+        <div class="flex flex-col items-center text-center text-xs">
+          <p>
+            Esta página es un proyecto personal y no está afiliada ni respaldada
+            por
+            <a href="https://www.ghibli.jp/" class="underline" target="_blank"
+              >Studio Ghibli</a
+            >
+            ni por los creadores de My Neighbor Totoro. Todos los derechos de
+            imagen y contenido pertenecen a sus respectivos dueños.
+          </p>
+          <span
+            >Creado por
+            <a
+              href="https://github.com/alenj0x1"
+              class="underline"
+              target="_blank"
+              >alenj0x1</a
+            >
+            -
+            <a
+              href="https://github.com/alenj0x1/my-neighbor-totoro"
+              class="underline"
+              target="_blank"
+              >Código fuente</a
+            >
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
