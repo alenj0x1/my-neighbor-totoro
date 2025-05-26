@@ -6,58 +6,14 @@
     <title>Mi vecino Totoro</title>
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
-
-      :root {
-        /* primary */
-        --primary-base: 88 36%;
-        --primary: var(--primary-base) 65%;
-        --primary-dark: var(--primary-base) 45%;
-        --primary-light: var(--primary-base) 95%;
-
-        /* secondary */
-        --secondary-base: 44 37%;
-        --secondary: var(--secondary-base) 90%;
-        --secondary-dark: var(--secondary-base) 60%;
-        --secondary-light: var(--secondary-base) 100%;
-
-        /* accent */
-        --accent-base: 248 8%;
-        --accent: var(--accent-base) 40%;
-        --accent-dark: var(--accent-base) 25%;
-        --accent-light: var(--acent-base) 60%;
-
-        /* text */
-        --text-base: 0 0%;
-        --text: var(--text-base) 90%;
-        --text-light: var(--text-base) 100%;
-        --text-dark: var(--text-base) 70%;
-
-        /* background */
-        --background: 10 10% 3%;
-      }
-
-      body {
-        background-color: hsl(var(--background));
-      }
-
-      * {
-        font-family: "Geist", sans-serif;
-      }
-
-      .base-color {
-        color: hsl(var(--text));
-      }
-    </style>
+    <link rel="stylesheet" href="/public/styles/index.css" />
   </head>
-  <body class="flex flex-col gap-16">
+  <body class="flex flex-col gap-16" data-theme="dark">
     <header
-      class="flex flex-col gap-6 md:flex-row justify-between items-center text-[hsl(var(--text))] bg-[hsla(var(--background)/0.50)] backdrop-blur-sm fixed w-full px-10 py-6 md:px-64 border-b-1 border-[hsla(var(--primary-light)/0.10)] z-10"
+      class="flex flex-col gap-6 md:flex-row justify-between items-center text-[hsl(var(--text))] bg-[hsla(var(--background)/0.50)] backdrop-blur-sm fixed w-full px-10 py-6 xl:px-64 border-b-1 border-[hsla(var(--primary-light)/0.10)] z-10"
     >
       <div class="flex items-end gap-2">
-        <span class="text-base">Mi vecino Totoro</span>
+        <span class="text-xl font-medium" data-i18n="nav_title">nav_title</span>
       </div>
 
       <nav class="text-sm">
@@ -88,13 +44,14 @@
                 </svg>
               </div>
 
-              Reseñas</a
+              <span data-i18n="nav_reviews">Reseñas</span></a
             >
           </li>
 
           <li>
-            <button
-              class="flex gap-2 bg-[hsl(var(--primary-dark))] text-[hsl(var(--text))] py-2 px-6 rounded text-sm w-full font-medium hover:bg-[hsla(var(--primary-dark)/0.85)] hover:cursor-pointer"
+            <a
+              href="#trailer"
+              class="flex items-center text-xs gap-2 bg-[hsl(var(--primary-dark))] text-[hsl(var(--primary-light))] py-2 px-6 rounded md:text-sm w-full font-medium hover:bg-[hsla(var(--primary-dark)/0.85)] hover:cursor-pointer"
             >
               <div class="h-5 w-5">
                 <svg
@@ -127,35 +84,125 @@
                   </g>
                 </svg>
               </div>
-              Ver trailer
-            </button>
+
+              <span data-i18n="nav_trailer">nav_trailer</span>
+            </a>
+          </li>
+
+          <li>
+            <select class="text-xs" id="change-lang">
+              <option
+                class="bg-[hsl(var(--background))] text-[hsl(var(--text))]"
+                data-i18n="nav_lang_es"
+                value="es"
+              >
+                nav_lang_es
+              </option>
+              <option
+                class="bg-[hsl(var(--background))] text-[hsl(var(--text))]"
+                data-i18n="nav_lang_en"
+                value="en"
+              >
+                nav_lang_en
+              </option>
+            </select>
+          </li>
+
+          <li>
+            <select class="text-xs" id="change-theme">
+              <option
+                class="bg-[hsl(var(--background))] text-[hsl(var(--text))]"
+                data-i18n="nav_theme_dark"
+                value="dark"
+              >
+                nav_theme_dark
+              </option>
+
+              <option
+                class="bg-[hsl(var(--background))] text-[hsl(var(--text))]"
+                data-i18n="nav_theme_dark_blue"
+                value="dark_blue"
+              >
+                nav_theme_dark_blue
+              </option>
+
+              <option
+                class="bg-[hsl(var(--background))] text-[hsl(var(--text))]"
+                data-i18n="nav_theme_dark_yellow"
+                value="dark_yellow"
+              >
+                nav_theme_dark_yellow
+              </option>
+
+              <option
+                class="bg-[hsl(var(--background))] text-[hsl(var(--text))]"
+                data-i18n="nav_theme_dark_pink"
+                value="dark_pink"
+              >
+                nav_theme_dark_pink
+              </option>
+
+              <option
+                class="bg-[hsl(var(--background))] text-[hsl(var(--text))]"
+                data-i18n="nav_theme_light"
+                value="light"
+              >
+                nav_theme_light
+              </option>
+
+              <option
+                class="bg-[hsl(var(--background))] text-[hsl(var(--text))]"
+                data-i18n="nav_theme_light_blue"
+                value="light_blue"
+              >
+                nav_theme_light_blue
+              </option>
+
+              <option
+                class="bg-[hsl(var(--background))] text-[hsl(var(--text))]"
+                data-i18n="nav_theme_light_yellow"
+                value="light_yellow"
+              >
+                nav_theme_light_yellow
+              </option>
+
+              <option
+                class="bg-[hsl(var(--background))] text-[hsl(var(--text))]"
+                data-i18n="nav_theme_light_pink"
+                value="light_pink"
+              >
+                nav_theme_light_pink
+              </option>
+            </select>
           </li>
         </ul>
       </nav>
     </header>
 
     <!-- hero -->
-    <section class="mx-8 md:mx-16 mt-[64px]">
+    <section class="mx-8 md:mx-16 mt-[94px] md:mt-[64px]">
       <!-- hero content -->
       <div
         class="flex flex-col-reverse md:flex-row justify-between gap-2 w-full pt-16"
       >
         <div class="flex flex-col gap-2 w-full md:w-1/2 justify-center">
           <h1 class="base-color flex flex-col text-5xl md:text-7xl font-bold">
-            Mi vecino <span class="text-[hsl(var(--primary))]">Totoro</span>
+            <span
+              data-i18n="hero_title"
+              data-i18n-replacements='{"mark": "<span class=\"text-[hsl(var(--primary))]\">Totoro</span>"}'
+              >hero_title</span
+            >
           </h1>
-          <p class="text-sm md:text-base text-[hsl(var(--text-dark))]">
-            Esta historia animada del director Hayao Miyazaki sigue a las
-            estudiantes y hermanas Satsuke y Mei mientras se establecen en su
-            casa de campo con su padre y esperan a que su madre se recupere de
-            una enfermedad en un hospital del área. Cuando las hermanas exploran
-            su nueva casa, descubren y hacen amistad con unos duendes
-            juguetones, y en el bosque cercano encuentran a una enorme criatura
-            conocida como Totoro.
+
+          <p
+            data-i18n="hero_description"
+            class="text-sm md:text-base text-[hsl(var(--text-light))]"
+          >
+            hero_description
           </p>
         </div>
 
-        <div class="flex w-full md:w-1/2 md:justify-end">
+        <div class="flex md:justify-end">
           <img
             src="https://mystickermania.com/cdn/stickers/anime/totoro-and-mei-kusakabe-512x512.png"
             alt="totoro and a girl"
@@ -164,6 +211,7 @@
       </div>
     </section>
 
+    <!-- section: reviews -->
     <section
       id="reviews"
       class="mx-8 md:mx-16 bg-[hsl(var(--primary-dark))] p-10 text-[hsl(var(--primary-light))] rounded-xl flex flex-col gap-3"
@@ -189,10 +237,13 @@
             </g>
           </svg>
         </div>
-        <h2 class="text-3xl font-bold">Reseñas</h2>
+
+        <h2 data-i18n="section_reviews_title" class="text-3xl font-bold">
+          section_reviews_title
+        </h2>
       </header>
 
-      <!-- reviews -->
+      <!-- reviews container -->
       <div class="flex flex-col md:grid md:grid-cols-3 gap-8 py-3">
         <!-- first review -->
         <article
@@ -215,9 +266,11 @@
           </div>
 
           <footer class="mt-4 border-t-1 border-[hsl(var(--primary-light))]">
-            <span class="text-xs font-light"
-              >Esta opinión le resultó útil a
-              <b class="font-bold">11</b> personas</span
+            <span
+              class="text-xs font-light"
+              data-i18n="section_reviews_useful_opinion"
+              data-i18n-replacements='{"persons_count": 11}'
+              >section_reviews_useful_opinion</span
             >
           </footer>
         </article>
@@ -243,9 +296,11 @@
           </div>
 
           <footer class="mt-4 border-t-1 border-[hsl(var(--primary-light))]">
-            <span class="text-xs font-light"
-              >Esta opinión le resultó útil a
-              <b class="font-bold">38</b> personas</span
+            <span
+              data-i18n="section_reviews_useful_opinion"
+              data-i18n-replacements='{"persons_count": 38}'
+              class="text-xs font-light"
+              >section_reviews_useful_opinion</span
             >
           </footer>
         </article>
@@ -272,9 +327,11 @@
           </div>
 
           <footer class="mt-4 border-t-1 border-[hsl(var(--primary-light))]">
-            <span class="text-xs font-light"
-              >Esta opinión le resultó útil a
-              <b class="font-bold">5</b> personas</span
+            <span
+              class="text-xs font-light"
+              data-i18n="section_reviews_useful_opinion"
+              data-i18n-replacements='{"persons_count": 5}'
+              >section_reviews_useful_opinion</span
             >
           </footer>
         </article>
@@ -300,9 +357,11 @@
           </div>
 
           <footer class="mt-4 border-t-1 border-[hsl(var(--primary-light))]">
-            <span class="text-xs font-light"
-              >Esta opinión le resultó útil a
-              <b class="font-bold">20</b> personas</span
+            <span
+              class="text-xs font-light"
+              data-i18n="section_reviews_useful_opinion"
+              data-i18n-replacements='{"persons_count": 20}'
+              >section_reviews_useful_opinion</span
             >
           </footer>
         </article>
@@ -311,15 +370,18 @@
       <footer class="md:self-end">
         <button
           class="bg-[hsl(var(--primary-light))] text-[hsl(var(--primary-dark))] py-2 px-6 rounded text-sm w-full font-medium hover:bg-[hsla(var(--primary-light)/0.85)] hover:cursor-pointer"
+          data-i18n="section_reviews_button_read_more"
+          data-i18n-replacements='{"arrow": "→"}'
         >
-          Leer más <span class="ml-2">→</span>
+          section_reviews_button_read_more
         </button>
       </footer>
     </section>
 
+    <!-- section: trailer -->
     <section
       id="trailer"
-      class="mx-8 md:mx-16 text-[hsl(var(--primary-light))] rounded-xl flexflex-col gap-3"
+      class="mx-8 md:mx-16 text-[hsl(var(--primary))] rounded-xl flexflex-col gap-3"
     >
       <header class="flex justify-center gap-2 flex-col items-center mb-8">
         <div class="h-10 w-10">
@@ -353,7 +415,9 @@
             </g>
           </svg>
         </div>
-        <h2 class="text-3xl font-bold">Trailer</h2>
+        <h2 class="text-3xl font-bold" data-i18n="section_trailer_title">
+          section_trailer_title
+        </h2>
       </header>
 
       <div
@@ -386,7 +450,7 @@
     <!-- footer -->
     <footer>
       <div
-        class="mx-8 md:mx-16 flex flex-col gap-4 items-center pb-16 text-[hsl(var(--primary))]"
+        class="mx-8 md:mx-16 flex flex-col gap-4 items-center pb-16 text-[hsl(var(--text-light))]"
       >
         <img
           class="h-24"
@@ -395,33 +459,73 @@
         />
 
         <div class="flex flex-col items-center text-center text-xs">
-          <p>
-            Esta página es un proyecto personal y no está afiliada ni respaldada
-            por
-            <a href="https://www.ghibli.jp/" class="underline" target="_blank"
-              >Studio Ghibli</a
-            >
-            ni por los creadores de My Neighbor Totoro. Todos los derechos de
-            imagen y contenido pertenecen a sus respectivos dueños.
+          <p
+            data-i18n="footer_copyright"
+            data-i18n-replacements='{"studio_ghibli": "<a href=\"https://www.ghibli.jp/\"  class=\"underline\" target=\"_blank\">Studio Ghibli</a>"}'
+          >
+            footer_copyright
           </p>
+
           <span
-            >Creado por
-            <a
-              href="https://github.com/alenj0x1"
-              class="underline"
-              target="_blank"
-              >alenj0x1</a
-            >
-            -
-            <a
-              href="https://github.com/alenj0x1/my-neighbor-totoro"
-              class="underline"
-              target="_blank"
-              >Código fuente</a
-            >
+            data-i18n="footer_created_by"
+            data-i18n-replacements='{"github_profile": "<a href=\"https://github.com/alenj0x1\" class=\"underline\" target=\"_blank\">alenj0x1</a>", "source_code": "<a href=\"https://github.com/alenj0x1/my-neighbor-totoro\" class=\"underline\" target=\"_blank\">Github</a>"}'
+          >
+            footer_created_by
           </span>
         </div>
       </div>
     </footer>
+
+    <script type="module">
+      import { i18n } from "/public/scripts/i18n.js";
+      const changeLang = document.getElementById("change-lang");
+      const changeTheme = document.getElementById("change-theme");
+      const defaultTheme = "dark";
+
+      // initialization
+      document.addEventListener("DOMContentLoaded", () => {
+        initLang();
+        initTheme();
+      });
+
+      // theme
+      function initTheme() {
+        let theme = localStorage.getItem("theme");
+        if (!theme) {
+          localStorage.setItem("theme", defaultTheme);
+          theme = localStorage.getItem("theme");
+        }
+
+        setTheme(theme);
+        changeTheme.value = theme;
+
+        changeTheme.addEventListener("change", (e) => {
+          const theme = e.target.value;
+
+          setTheme(theme);
+          localStorage.setItem("theme", theme);
+        });
+      }
+
+      function setTheme(theme) {
+        document.body.setAttribute("data-theme", theme);
+      }
+
+      // lang
+      function initLang() {
+        if (i18n.currentLang) {
+          changeLang.value = i18n.currentLang;
+        } else {
+          i18n.setLang(i18n.defaultLang);
+        }
+
+        i18n.render();
+
+        changeLang.addEventListener("change", (e) => {
+          i18n.setLang(e.target.value);
+          i18n.render();
+        });
+      }
+    </script>
   </body>
 </html>

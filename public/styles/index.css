@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+
+:root,
+[data-theme="dark"] {
+  /* primary */
+  --primary-base: 88 36%;
+  --primary: var(--primary-base) 65%;
+  --primary-dark: var(--primary-base) 45%;
+  --primary-light: var(--primary-base) 95%;
+
+  /* secondary */
+  --secondary-base: 44 37%;
+  --secondary: var(--secondary-base) 90%;
+  --secondary-dark: var(--secondary-base) 60%;
+  --secondary-light: var(--secondary-base) 100%;
+
+  /* accent */
+  --accent-base: 248 8%;
+  --accent: var(--accent-base) 40%;
+  --accent-dark: var(--accent-base) 25%;
+  --accent-light: var(--acent-base) 60%;
+
+  /* text */
+  --text-base: 0 0%;
+  --text: var(--text-base) 90%;
+  --text-light: var(--text-base) 70%;
+  --text-dark: var(--text-base) 70%;
+
+  /* background */
+  --background: 10 10% 3%;
+}
+
+[data-theme="dark_blue"] {
+  /* primary */
+  --primary-base: 200 36%;
+  --primary: var(--primary-base) 65%;
+  --primary-dark: var(--primary-base) 45%;
+  --primary-light: var(--primary-base) 95%;
+
+  /* secondary */
+  --secondary-base: 44 37%;
+  --secondary: var(--secondary-base) 90%;
+  --secondary-dark: var(--secondary-base) 60%;
+  --secondary-light: var(--secondary-base) 100%;
+
+  /* accent */
+  --accent-base: 248 8%;
+  --accent: var(--accent-base) 40%;
+  --accent-dark: var(--accent-base) 25%;
+  --accent-light: var(--acent-base) 60%;
+
+  /* text */
+  --text-base: 0 0%;
+  --text: var(--text-base) 90%;
+  --text-light: var(--text-base) 70%;
+  --text-dark: var(--text-base) 70%;
+
+  /* background */
+  --background: 10 10% 3%;
+}
+
+[data-theme="dark_yellow"] {
+  /* primary */
+  --primary-base: 50 36%;
+  --primary: var(--primary-base) 65%;
+  --primary-dark: var(--primary-base) 45%;
+  --primary-light: var(--primary-base) 95%;
+
+  /* secondary */
+  --secondary-base: 44 37%;
+  --secondary: var(--secondary-base) 90%;
+  --secondary-dark: var(--secondary-base) 60%;
+  --secondary-light: var(--secondary-base) 100%;
+
+  /* accent */
+  --accent-base: 248 8%;
+  --accent: var(--accent-base) 40%;
+  --accent-dark: var(--accent-base) 25%;
+  --accent-light: var(--acent-base) 60%;
+
+  /* text */
+  --text-base: 0 0%;
+  --text: var(--text-base) 90%;
+  --text-light: var(--text-base) 70%;
+  --text-dark: var(--text-base) 70%;
+
+  /* background */
+  --background: 10 10% 3%;
+}
+
+[data-theme="dark_pink"] {
+  /* primary */
+  --primary-base: 340 30%;
+  --primary: var(--primary-base) 65%;
+  --primary-dark: var(--primary-base) 45%;
+  --primary-light: var(--primary-base) 95%;
+
+  /* secondary */
+  --secondary-base: 44 37%;
+  --secondary: var(--secondary-base) 90%;
+  --secondary-dark: var(--secondary-base) 60%;
+  --secondary-light: var(--secondary-base) 100%;
+
+  /* accent */
+  --accent-base: 248 8%;
+  --accent: var(--accent-base) 40%;
+  --accent-dark: var(--accent-base) 25%;
+  --accent-light: var(--acent-base) 60%;
+
+  /* text */
+  --text-base: 0 0%;
+  --text: var(--text-base) 90%;
+  --text-light: var(--text-base) 70%;
+  --text-dark: var(--text-base) 70%;
+
+  /* background */
+  --background: 10 10% 3%;
+}
+
+[data-theme="light"] {
+  /* primary */
+  --primary-base: 88 36%;
+  --primary: var(--primary-base) 65%;
+  --primary-dark: var(--primary-base) 45%;
+  --primary-light: var(--primary-base) 95%;
+
+  /* secondary */
+  --secondary-base: 44 37%;
+  --secondary: var(--secondary-base) 90%;
+  --secondary-dark: var(--secondary-base) 60%;
+  --secondary-light: var(--secondary-base) 100%;
+
+  /* accent */
+  --accent-base: 248 8%;
+  --accent: var(--accent-base) 40%;
+  --accent-dark: var(--accent-base) 25%;
+  --accent-light: var(--acent-base) 60%;
+
+  /* text */
+  --text-base: 0 0%;
+  --text: var(--text-base) 10%;
+  --text-light: var(--text-base) 50%;
+  --text-dark: var(--text-base) 70%;
+
+  /* background */
+  --background: 10 10% 100%;
+}
+
+[data-theme="light_blue"] {
+  /* primary */
+  --primary-base: 200 36%;
+  --primary: var(--primary-base) 65%;
+  --primary-dark: var(--primary-base) 45%;
+  --primary-light: var(--primary-base) 95%;
+
+  /* secondary */
+  --secondary-base: 44 37%;
+  --secondary: var(--secondary-base) 90%;
+  --secondary-dark: var(--secondary-base) 60%;
+  --secondary-light: var(--secondary-base) 100%;
+
+  /* accent */
+  --accent-base: 248 8%;
+  --accent: var(--accent-base) 40%;
+  --accent-dark: var(--accent-base) 25%;
+  --accent-light: var(--acent-base) 60%;
+
+  /* text */
+  --text-base: 0 0%;
+  --text: var(--text-base) 10%;
+  --text-light: var(--text-base) 50%;
+  --text-dark: var(--text-base) 70%;
+
+  /* background */
+  --background: 10 10% 100%;
+}
+
+[data-theme="light_yellow"] {
+  /* primary */
+  --primary-base: 50 36%;
+  --primary: var(--primary-base) 65%;
+  --primary-dark: var(--primary-base) 45%;
+  --primary-light: var(--primary-base) 95%;
+
+  /* secondary */
+  --secondary-base: 44 37%;
+  --secondary: var(--secondary-base) 90%;
+  --secondary-dark: var(--secondary-base) 60%;
+  --secondary-light: var(--secondary-base) 100%;
+
+  /* accent */
+  --accent-base: 248 8%;
+  --accent: var(--accent-base) 40%;
+  --accent-dark: var(--accent-base) 25%;
+  --accent-light: var(--acent-base) 60%;
+
+  /* text */
+  --text-base: 0 0%;
+  --text: var(--text-base) 10%;
+  --text-light: var(--text-base) 50%;
+  --text-dark: var(--text-base) 70%;
+
+  /* background */
+  --background: 10 10% 100%;
+}
+
+[data-theme="light_pink"] {
+  /* primary */
+  --primary-base: 340 30%;
+  --primary: var(--primary-base) 65%;
+  --primary-dark: var(--primary-base) 45%;
+  --primary-light: var(--primary-base) 95%;
+
+  /* secondary */
+  --secondary-base: 44 37%;
+  --secondary: var(--secondary-base) 90%;
+  --secondary-dark: var(--secondary-base) 60%;
+  --secondary-light: var(--secondary-base) 100%;
+
+  /* accent */
+  --accent-base: 248 8%;
+  --accent: var(--accent-base) 40%;
+  --accent-dark: var(--accent-base) 25%;
+  --accent-light: var(--acent-base) 60%;
+
+  /* text */
+  --text-base: 0 0%;
+  --text: var(--text-base) 10%;
+  --text-light: var(--text-base) 50%;
+  --text-dark: var(--text-base) 70%;
+
+  /* background */
+  --background: 10 10% 100%;
+}
+
+body {
+  background-color: hsl(var(--background));
+}
+
+* {
+  font-family: "Geist", sans-serif;
+}
+
+.base-color {
+  color: hsl(var(--text));
+}
