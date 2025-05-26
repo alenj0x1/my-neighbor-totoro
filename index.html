@@ -6,7 +6,7 @@
     <title>Mi vecino Totoro</title>
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="/public/styles/index.css" />
+    <link rel="stylesheet" href="./public/styles/index.css" />
   </head>
   <body class="flex flex-col gap-16" data-theme="dark">
     <header
@@ -44,7 +44,7 @@
                 </svg>
               </div>
 
-              <span data-i18n="nav_reviews">Reseñas</span></a
+              <span data-i18n="nav_reviews">nav_reviews</span></a
             >
           </li>
 
@@ -477,7 +477,7 @@
     </footer>
 
     <script type="module">
-      import { i18n } from "/public/scripts/i18n.js";
+      import { i18n } from "./public/scripts/i18n.js";
       const changeLang = document.getElementById("change-lang");
       const changeTheme = document.getElementById("change-theme");
       const defaultTheme = "dark";
